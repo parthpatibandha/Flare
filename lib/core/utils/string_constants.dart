@@ -13,6 +13,7 @@ class StringConstants {
   static const String screenUiComponentTabBar = "TabBar";
   static const String screenUiComponentDialogs = "Dialog & Alerts";
   static const String screenUiComponentCardAndChips = "Cards & List Tile & Chip";
+  static const String screenBlocHttpApiCall = "Bloc - Simple HTTP Api Call";
   static const String screenBrowserUrlLaunch = "Browser - URL";
   static const String screenLocalization = "Localization";
   static const String screenLocation = "Location";

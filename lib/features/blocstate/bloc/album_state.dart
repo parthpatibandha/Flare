@@ -15,12 +15,12 @@ class Empty extends AlbumState {}
 class Loading extends AlbumState {}
 
 class Loaded extends AlbumState {
-  final Album album;
+  final List<Album> albums;
 
-  Loaded({required this.album});
+  Loaded({required this.albums});
 
   @override
-  List<Object> get props => [album];
+  List<Object> get props => [albums];
 }
 
 class Error extends AlbumState {
