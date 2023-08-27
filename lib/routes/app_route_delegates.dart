@@ -3,6 +3,7 @@ import 'package:camera/camera.dart';
 import 'package:flare/core/utils/logger.dart';
 import 'package:flare/features/camerafiles/gallery_screen.dart';
 import 'package:flare/features/camerafiles/take_picture_screen.dart';
+import 'package:flare/features/firebase/firebase_notification_screen.dart';
 import 'package:flare/features/graphql/graphql_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flare/HomeScreen.dart';
@@ -26,11 +27,7 @@ class RoutesDelegator {
   final routerDelegate = BeamerDelegate(
       locationBuilder: RoutesLocationBuilder(
         routes: {
-          '/': (context, state, data) => BeamPage(
-                key: const ValueKey('home'),
-                title: 'Home',
-                child: HomeScreen(),
-              ),
+          "/" : (context, state, data) => HomeScreen(),
           AppRoutes.home: (context, state, data) => HomeScreen(),
           AppRoutes.uiComponentAppBar: (context, state, data) => AppBarScreen(),
           AppRoutes.uiComponentBottomNavigationBar: (context, state, data) => BottomNavBarScreen(),
@@ -63,7 +60,8 @@ class RoutesDelegator {
           },
           AppRoutes.takePicture: (context, state, data) => TakePictureScreen(
                 camera: data as CameraDescription,
-              )
+              ),
+          AppRoutes.firebaseNotification: (context, state, data) => FirebaseNotificationScreen(),
         },
       ),
       notFoundPage: BeamPage(child: NotFoundPage()));

@@ -17,4 +17,5 @@ class AppRoutes {
   static const String cameraFiles = "/home/cameraFiles";
   static const String takePicture = "/home/cameraFiles/takePicture";
   static const String selectFromGallery = "home/cameraFiles/selectFromGallery";
+  static const String firebaseNotification = "/home/firebaseNotification";
 }

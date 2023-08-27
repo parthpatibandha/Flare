@@ -23,6 +23,7 @@ class StringConstants {
   static const String screenLocation = "Location";
   static const String screenGraphQL = "Graph QL";
   static const String screenGallery = "Gallery";
+  static const String screenFirebaseNotification = "Firebase Notification";
 
   ///error - strings
   static const String unknownError = "Unknown Error";

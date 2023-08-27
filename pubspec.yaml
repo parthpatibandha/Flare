@@ -52,6 +52,10 @@ dependencies:
   path_provider: ^2.0.15
   path: ^1.8.3
   image_picker: ^1.0.1
+  flutter_local_notifications: ^13.0.0
+  image: ^4.0.15
+  firebase_core: ^2.15.1
+  firebase_messaging: ^14.6.7
 
 dev_dependencies:
   flutter_test:

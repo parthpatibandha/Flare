@@ -36,6 +36,7 @@ class HomeScreenState extends State<HomeScreen> {
     Chapter(name: "Browser Demo", route: AppRoutes.browser),
     Chapter(name: "GraphQL", route: AppRoutes.graphQL),
     Chapter(name: "Gallery", route: AppRoutes.cameraFiles),
+    Chapter(name: "Firebase - Notification", route: AppRoutes.firebaseNotification),
 
   ];
 
