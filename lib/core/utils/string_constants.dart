@@ -3,6 +3,10 @@ class StringConstants {
   ///app name
   static const String appName = "Flare";
 
+  static const String empty = "";
+  static const String space = " ";
+  static const String dash = "-";
+
   ///Screens
   static const String screenNotImplemented = "Screen Not Implemented";
   static const String screenUiComponentText = "Text & Input Field";
@@ -18,6 +22,7 @@ class StringConstants {
   static const String screenLocalization = "Localization";
   static const String screenLocation = "Location";
   static const String screenGraphQL = "Graph QL";
+  static const String screenGallery = "Gallery";
 
   ///error - strings
   static const String unknownError = "Unknown Error";
@@ -34,5 +39,11 @@ class StringConstants {
   ///temp strings
   static const String dummyFlutter = "Flutter is an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase.";
   static const String dummyFlutterShort = "Flutter is an open source framework";
+
+
+  ///Widget Keys
+  static const String keyChapter = "key_chapter";
+  static const String keyAlbumScreen = "key_album_list";
+  static const String keyGalleryScreen = "key_gallery";
 
 }

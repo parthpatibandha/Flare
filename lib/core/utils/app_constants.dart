@@ -16,6 +16,7 @@ class AppConstants {
   static const double appBarHeight = 54.0;
   static const double appBarDividerHeight = 2.0;
   static const double eight = 8.0;
+  static const double twelve = 12.0;
   static const double sixteen = 16.0;
 
 }

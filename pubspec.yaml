@@ -48,6 +48,10 @@ dependencies:
   url_launcher: ^6.1.6
   provider: ^6.0.4
   fluttertoast: ^8.1.1
+  camera: ^0.10.5+2
+  path_provider: ^2.0.15
+  path: ^1.8.3
+  image_picker: ^1.0.1
 
 dev_dependencies:
   flutter_test:

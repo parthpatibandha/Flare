@@ -1,7 +1,6 @@
 import 'package:flare/core/utils/string_constants.dart';
 import 'package:flare/core/widgets/appbar_widget.dart';
 import 'package:flare/features/blocstate/view/album_list_item.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flare/core/widgets/loading_widget.dart';
@@ -11,6 +10,8 @@ import 'package:flare/features/blocstate/bloc/album_event.dart';
 import 'package:flare/features/blocstate/bloc/album_state.dart';
 
 class AlbumScreen extends StatefulWidget {
+  const AlbumScreen() : super(key: const Key(StringConstants.keyAlbumScreen));
+
   @override
   State<StatefulWidget> createState() {
     return AlbumScreenState();

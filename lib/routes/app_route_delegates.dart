@@ -1,4 +1,8 @@
 import 'package:beamer/beamer.dart';
+import 'package:camera/camera.dart';
+import 'package:flare/core/utils/logger.dart';
+import 'package:flare/features/camerafiles/gallery_screen.dart';
+import 'package:flare/features/camerafiles/take_picture_screen.dart';
 import 'package:flare/features/graphql/graphql_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flare/HomeScreen.dart';
@@ -23,7 +27,7 @@ class RoutesDelegator {
       locationBuilder: RoutesLocationBuilder(
         routes: {
           '/': (context, state, data) => BeamPage(
-                key: ValueKey('home'),
+                key: const ValueKey('home'),
                 title: 'Home',
                 child: HomeScreen(),
               ),
@@ -36,11 +40,30 @@ class RoutesDelegator {
           AppRoutes.uiComponentTabBar: (context, state, data) => TabbarScreen(),
           AppRoutes.uiComponentDialogs: (context, state, data) => DialogScreen(),
           AppRoutes.uiComponentCards: (context, state, data) => CardAndChipScreen(),
-          AppRoutes.bloc: (context, state, data) => AlbumScreen(),
+          AppRoutes.bloc: (context, state, data) => const AlbumScreen(),
           AppRoutes.localizations: (context, state, data) => CustomLocalizationScreen(),
           AppRoutes.location: (context, state, data) => LocationScreen(),
           AppRoutes.browser: (context, state, data) => BrowserScreen(),
           AppRoutes.graphQL: (context, state, data) => GraphQLScreen(),
+          AppRoutes.cameraFiles: (context, state, data) {
+            String? path = "";
+            if (data != null && data is String) {
+              path = data;
+            }
+            if (path != null && path.isNotEmpty) {
+              Logger.d("Gallery beamer file path : $path");
+              return GalleryScreen(
+                imagePath: path,
+              );
+            } else {
+              return GalleryScreen(
+                imagePath: "",
+              );
+            }
+          },
+          AppRoutes.takePicture: (context, state, data) => TakePictureScreen(
+                camera: data as CameraDescription,
+              )
         },
       ),
       notFoundPage: BeamPage(child: NotFoundPage()));

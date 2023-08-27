@@ -1,4 +1,5 @@
 import 'package:beamer/beamer.dart';
+import 'package:flare/core/widgets/home_chapter_widget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flare/core/utils/string_constants.dart';
@@ -34,6 +35,8 @@ class HomeScreenState extends State<HomeScreen> {
     Chapter(name: "Location", route: AppRoutes.location),
     Chapter(name: "Browser Demo", route: AppRoutes.browser),
     Chapter(name: "GraphQL", route: AppRoutes.graphQL),
+    Chapter(name: "Gallery", route: AppRoutes.cameraFiles),
+
   ];
 
   @override
@@ -53,23 +56,7 @@ class HomeScreenState extends State<HomeScreen> {
             itemCount: entries.length,
             itemBuilder: (BuildContext context, int index) {
               Chapter chapter = entries[index];
-              String title = chapter.name;
-              return Card(
-                elevation: 0,
-                shape: RoundedRectangleBorder(
-                  side: BorderSide(
-                    color: Theme.of(context).colorScheme.outline,
-                  ),
-                  borderRadius: const BorderRadius.all(Radius.circular(8)),
-                ),
-                child: InkWell(
-                  child: Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Text(title),
-                  ),
-                  onTap: () => {context.beamToNamed(chapter.route, data: chapter)},
-                ),
-              );
+              return ChapterWidget(chapter: chapter);
             }),
       ),
     );

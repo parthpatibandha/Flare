@@ -14,4 +14,7 @@ class AppRoutes {
   static const String location = "/location";
   static const String browser = "/browser";
   static const String graphQL = "/graphql";
+  static const String cameraFiles = "/home/cameraFiles";
+  static const String takePicture = "/home/cameraFiles/takePicture";
+  static const String selectFromGallery = "home/cameraFiles/selectFromGallery";
 }
