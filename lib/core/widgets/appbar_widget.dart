@@ -7,7 +7,7 @@ import 'package:flare/core/utils/app_constants.dart';
 /// @param [message] : The appbar title
 /// @param [leading] : The left side icon
 /// @param [actionList] : The right side icon list or action buttons
-class AppBarWidget extends StatefulWidget with PreferredSizeWidget {
+class AppBarWidget extends StatefulWidget implements PreferredSizeWidget {
   String message;
   Widget? leading;
   List<Widget>? actionList = List.empty(growable: true);
